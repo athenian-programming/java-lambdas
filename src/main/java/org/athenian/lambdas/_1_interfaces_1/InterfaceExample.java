@@ -13,7 +13,6 @@ class InterfaceExample {
     mammalQuestions(dog, lion);
     reptileQuestions(snake, turtle);
     animalQuestions(dog, lion, snake, turtle);
-
   }
 
   static void mammalQuestions(Mammal... mammals) {
@@ -42,5 +41,4 @@ class InterfaceExample {
         System.out.println(String.format("A %s is silent", name));
     }
   }
-
 }

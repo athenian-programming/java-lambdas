@@ -6,12 +6,13 @@ public class StringPredicateExample {
 
   public static void main(String[] args) {
 
-    Predicate<String> containsHelloLong = new Predicate<String>() {
-      @Override
-      public boolean test(String val) {
-        return val.contains("Hello");
-      }
-    };
+    Predicate<String> containsHelloLong =
+        new Predicate<String>() {
+          @Override
+          public boolean test(String val) {
+            return val.contains("Hello");
+          }
+        };
 
     Predicate<String> containsHelloMed = (String val) -> {
       return val.contains("Hello");

@@ -8,29 +8,31 @@ public class IntStreamExample1 {
 
   public static void main(String[] args) {
 
-    // Non-lambda way
+    // The non-lambda way
     for (int i = 0; i < 10; i++) {
       if (i % 2 != 0)
         continue;
       System.out.println(i);
     }
 
-    // Verbose anonymous class
+    // Using anonymous classes
     IntStream.range(0, 10)
-             .filter(new IntPredicate() {
-               @Override
-               public boolean test(int i) {
-                 return i % 2 == 0;
-               }
-             })
-             .forEach(new IntConsumer() {
-               @Override
-               public void accept(int i) {
-                 System.out.println(i);
-               }
-             });
+             .filter(
+                 new IntPredicate() {
+                   @Override
+                   public boolean test(int i) {
+                     return i % 2 == 0;
+                   }
+                 })
+             .forEach(
+                 new IntConsumer() {
+                   @Override
+                   public void accept(int i) {
+                     System.out.println(i);
+                   }
+                 });
 
-    // Lambda
+    // Using lambdas
     IntStream.range(0, 10)
              .filter(i -> i % 2 == 0)
              .forEach(i -> System.out.println(i));

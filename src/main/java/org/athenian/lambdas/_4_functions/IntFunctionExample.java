@@ -6,12 +6,13 @@ public class IntFunctionExample {
 
   public static void main(String[] args) {
 
-    Function<Integer, Integer> squareLong = new Function<Integer, Integer>() {
-      @Override
-      public Integer apply(Integer val) {
-        return val * val;
-      }
-    };
+    Function<Integer, Integer> squareLong =
+        new Function<Integer, Integer>() {
+          @Override
+          public Integer apply(Integer val) {
+            return val * val;
+          }
+        };
 
     Function<Integer, Integer> squareMed = (Integer val) -> {
       return val * val;

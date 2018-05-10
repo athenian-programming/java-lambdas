@@ -4,9 +4,9 @@ public class LambdaExample {
 
   public static void main(String[] args) {
 
-    // Use anonymous class
-    TextConvert toLower =
-        new TextConvert() {
+    // Anonymous class
+    TextConverter toLower =
+        new TextConverter() {
           @Override
           public String convert(String text) {
             return text.toLowerCase();
@@ -14,23 +14,51 @@ public class LambdaExample {
         };
 
     // Convert to lambda
-    TextConvert toUpper = (String text) -> {
+    TextConverter toUpper = (String text) -> {
       return text.toUpperCase();
     };
 
-    // Simplify parameter decl
-    TextConvert first3 = text -> {
-      return text.substring(0, 3);
+    // Simplify to expression body
+    TextConverter doubler = text -> text + text;
+
+    // Non-lambda blocks requires curlies
+    TextConverter reverser = text -> {
+      StringBuilder sb = new StringBuilder();
+      for (int i = text.length() - 1; i >= 0; i--)
+        sb.append(text.charAt(i));
+      return sb.toString();
     };
 
-    // Simplify to single line
-    TextConvert stripL = text -> text.replaceAll("l", "");
+    convertText("Hello 1", toLower);
+    convertText("Hello 2", toUpper);
+    convertText("Hello 3", doubler);
+    convertText("Hello 4", reverser);
+    convertText("Hello 5", toLower, doubler, reverser);
+    convertText("Hello 7", toUpper, reverser, doubler, reverser);
 
-    System.out.println(toLower.convert("Hello 1"));
-    System.out.println(toUpper.convert("Hello 2"));
-    System.out.println(first3.convert("Hello 3"));
-    System.out.println(stripL.convert("Hello 4"));
+    convertText("Hello 8", text -> text.toLowerCase());
+    convertText("Hello 9", text -> text.replaceAll("9", "999"));
 
-    System.out.println(toLower.getClass().getName());
+    convertText("Hello 10",
+                text -> text.toUpperCase(),
+                text -> text + text,
+                text -> {
+                  StringBuilder sb = new StringBuilder();
+                  for (int i = text.length() - 1; i >= 0; i--)
+                    sb.append(text.charAt(i));
+                  return sb.toString();
+                });
   }
+
+  static void convertText(String text, TextConverter... converters) {
+    System.out.println(String.format("Applying %d filters to [%s]", converters.length, text));
+    String result = text;
+    for (TextConverter converter : converters) {
+      result = converter.convert(result);
+      System.out.println(String.format("Applied [%s] and got [%s]", converter.getClass().getName(), result));
+    }
+    System.out.println(result);
+    System.out.println();
+  }
+
 }

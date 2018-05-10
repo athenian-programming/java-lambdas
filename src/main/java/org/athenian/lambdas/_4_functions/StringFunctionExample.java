@@ -6,7 +6,7 @@ public class StringFunctionExample {
 
   public static void main(String[] args) {
 
-    Function<String, String> reverse =
+    Function<String, String> reverser =
         val -> {
           StringBuilder sb = new StringBuilder();
           for (int i = val.length() - 1; i >= 0; i--)
@@ -14,6 +14,6 @@ public class StringFunctionExample {
           return sb.toString();
         };
 
-    System.out.println(reverse.apply("Hello Goodbye"));
+    System.out.println(reverser.apply("Hello Goodbye"));
   }
 }

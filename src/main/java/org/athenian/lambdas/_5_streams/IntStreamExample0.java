@@ -7,11 +7,11 @@ public class IntStreamExample0 {
 
   public static void main(String[] args) {
 
-    // Non-lambda way
+    // The non-lambda way
     for (int i = 0; i < 10; i++)
       System.out.println(i);
 
-    // Verbose anonymous class
+    // Using a verbose anonymous class
     IntStream.range(0, 10)
              .forEach(new IntConsumer() {
                @Override
@@ -20,7 +20,7 @@ public class IntStreamExample0 {
                }
              });
 
-    // Lambda
+    // Using a lambda
     IntStream.range(0, 10)
              .forEach(i -> System.out.println(i));
 

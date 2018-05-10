@@ -6,12 +6,13 @@ public class IntPredicateExample {
 
   public static void main(String[] args) {
 
-    Predicate<Integer> isEvenLong = new Predicate<Integer>() {
-      @Override
-      public boolean test(Integer val) {
-        return val % 2 == 0;
-      }
-    };
+    Predicate<Integer> isEvenLong =
+        new Predicate<Integer>() {
+          @Override
+          public boolean test(Integer val) {
+            return val % 2 == 0;
+          }
+        };
 
     Predicate<Integer> isEvenMed = (Integer val) -> {
       return val % 2 == 0;
