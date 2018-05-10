@@ -1,0 +1,19 @@
+package org.athenian.lambdas._4_functions;
+
+import java.util.function.Function;
+
+public class StringFunctionExample {
+
+  public static void main(String[] args) {
+
+    Function<String, String> reverse =
+        val -> {
+          StringBuilder sb = new StringBuilder();
+          for (int i = val.length() - 1; i >= 0; i--)
+            sb.append(val.charAt(i));
+          return sb.toString();
+        };
+
+    System.out.println(reverse.apply("Hello Goodbye"));
+  }
+}
