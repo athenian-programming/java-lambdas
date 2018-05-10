@@ -1,4 +1,4 @@
-package org.athenian.lambdas._1_interfaces_anonymous;
+package org.athenian.lambdas._1_interfaces_2;
 
 
 public class InterfaceExample {
