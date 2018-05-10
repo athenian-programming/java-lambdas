@@ -1,13 +1,46 @@
-package org.athenian.lambdas._0_subclasses;
+package org.athenian.lambdas._1_interfaces_anonymous;
 
-public class SubClassExample {
+
+public class InterfaceExample {
 
   public static void main(String[] args) {
 
-    TextConverter toLower = new ToLower();
-    TextConverter toUpper = new ToUpper();
-    TextConverter doubler = new Doubler();
-    TextConverter reverser = new Reverser();
+    // Anonymous class
+    TextConverter toLower =
+        new TextConverter() {
+          @Override
+          public String convert(String text) {
+            return text.toLowerCase();
+          }
+        };
+
+    TextConverter toUpper =
+        new TextConverter() {
+          @Override
+          public String convert(String text) {
+            return text.toUpperCase();
+          }
+        };
+
+    TextConverter doubler =
+        new TextConverter() {
+          @Override
+          public String convert(String text) {
+            return text + text;
+          }
+        };
+
+    TextConverter reverser =
+        new TextConverter() {
+          @Override
+          public String convert(String text) {
+            StringBuilder sb = new StringBuilder();
+            for (int i = text.length() - 1; i >= 0; i--)
+              sb.append(text.charAt(i));
+            return sb.toString();
+
+          }
+        };
 
     singleConvertText("Hello 1", toLower);
     singleConvertText("Hello 2", toUpper);

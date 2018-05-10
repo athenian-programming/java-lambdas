@@ -1,10 +1,10 @@
 package org.athenian.lambdas._0_subclasses;
 
-public class StripL
-    extends TextConvert {
+public class Doubler
+    extends TextConverter {
 
   @Override
   String convert(String text) {
-    return text.replaceAll("l", "");
+    return text + text;
   }
 }

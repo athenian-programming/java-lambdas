@@ -1,7 +1,7 @@
 package org.athenian.lambdas._0_subclasses;
 
 public class ToLower
-    extends TextConvert {
+    extends TextConverter {
 
   @Override
   String convert(String text) {
