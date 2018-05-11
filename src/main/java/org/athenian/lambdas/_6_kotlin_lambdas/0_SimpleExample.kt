@@ -1,4 +1,4 @@
-package org.athenian.lambdas
+package org.athenian.lambdas._6_kotlin_lambdas
 
 
 val constant = { 4 }

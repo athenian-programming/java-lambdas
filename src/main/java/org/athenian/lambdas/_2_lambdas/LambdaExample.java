@@ -29,17 +29,17 @@ public class LambdaExample {
       return sb.toString();
     };
 
-    convertText("Hello 1", toLower);
-    convertText("Hello 2", toUpper);
-    convertText("Hello 3", doubler);
-    convertText("Hello 4", reverser);
-    convertText("Hello 5", toLower, doubler, reverser);
-    convertText("Hello 7", toUpper, reverser, doubler, reverser);
+    apply("Hello 1", toLower);
+    apply("Hello 2", toUpper);
+    apply("Hello 3", doubler);
+    apply("Hello 4", reverser);
+    apply("Hello 5", toLower, doubler, reverser);
+    apply("Hello 7", toUpper, reverser, doubler, reverser);
 
-    convertText("Hello 8", text -> text.toLowerCase());
-    convertText("Hello 9", text -> text.replaceAll("9", "999"));
+    apply("Hello 8", text -> text.toLowerCase());
+    apply("Hello 9", text -> text.replaceAll("9", "999"));
 
-    convertText("Hello 10",
+    apply("Hello 10",
                 text -> text.toUpperCase(),
                 text -> text + text,
                 text -> {
@@ -50,7 +50,7 @@ public class LambdaExample {
                 });
   }
 
-  static void convertText(String text, TextConverter... converters) {
+  static void apply(String text, TextConverter... converters) {
     System.out.println(String.format("Applying %d filters to [%s]", converters.length, text));
     String result = text;
     for (TextConverter converter : converters) {

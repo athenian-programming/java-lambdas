@@ -20,16 +20,16 @@ class SubClassExample {
           }
         };
 
-    convertText("Hello 1", toLower);
-    convertText("Hello 2", toUpper);
-    convertText("Hello 3", doubler);
-    convertText("Hello 4", reverser);
-    convertText("Hello 5", toLower, doubler, reverser);
-    convertText("Hello 6", toUpper, reverser, doubler);
-    convertText("Hello 7", toUpper, reverser, doubler, reverser);
+    apply("Hello 1", toLower);
+    apply("Hello 2", toUpper);
+    apply("Hello 3", doubler);
+    apply("Hello 4", reverser);
+    apply("Hello 5", toLower, doubler, reverser);
+    apply("Hello 6", toUpper, reverser, doubler);
+    apply("Hello 7", toUpper, reverser, doubler, reverser);
   }
 
-  static void convertText(String text, TextConverter... converters) {
+  static void apply(String text, TextConverter... converters) {
     System.out.println(String.format("Applying %d filters to [%s]", converters.length, text));
     String result = text;
     for (TextConverter converter : converters) {
