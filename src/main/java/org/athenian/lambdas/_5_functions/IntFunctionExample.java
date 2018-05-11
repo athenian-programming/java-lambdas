@@ -6,7 +6,8 @@ public class IntFunctionExample {
 
   public static void main(String[] args) {
 
-    Function<Integer, Integer> squareLong =
+    // Verbose
+    Function<Integer, Integer> squareVerbose =
         new Function<Integer, Integer>() {
           @Override
           public Integer apply(Integer val) {

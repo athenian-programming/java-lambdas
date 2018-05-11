@@ -6,7 +6,8 @@ public class StringPredicateExample {
 
   public static void main(String[] args) {
 
-    Predicate<String> containsHelloLong =
+    // Verbose
+    Predicate<String> containsHelloVerbose =
         new Predicate<String>() {
           @Override
           public boolean test(String val) {
@@ -14,13 +15,15 @@ public class StringPredicateExample {
           }
         };
 
+    // Better
     Predicate<String> containsHelloMed = (String val) -> {
       return val.contains("Hello");
     };
 
-    Predicate<String> containsHello = val -> val.contains("Hello");
+    // Terse
+    Predicate<String> containsHelloTerse = val -> val.contains("Hello");
 
-    System.out.println(containsHello.test("Hello"));
-    System.out.println(containsHello.test("Goodbye"));
+    System.out.println(containsHelloTerse.test("Hello"));
+    System.out.println(containsHelloTerse.test("Goodbye"));
   }
 }

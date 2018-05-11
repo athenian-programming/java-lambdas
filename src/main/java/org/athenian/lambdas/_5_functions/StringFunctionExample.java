@@ -7,10 +7,10 @@ public class StringFunctionExample {
   public static void main(String[] args) {
 
     Function<String, String> reverser =
-        val -> {
+        text -> {
           StringBuilder sb = new StringBuilder();
-          for (int i = val.length() - 1; i >= 0; i--)
-            sb.append(val.charAt(i));
+          for (int i = text.length() - 1; i >= 0; i--)
+            sb.append(text.charAt(i));
           return sb.toString();
         };
 

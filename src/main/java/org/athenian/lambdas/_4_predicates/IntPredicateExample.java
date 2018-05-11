@@ -6,7 +6,8 @@ public class IntPredicateExample {
 
   public static void main(String[] args) {
 
-    Predicate<Integer> isEvenLong =
+    // Verbose
+    Predicate<Integer> isEvenVerbose =
         new Predicate<Integer>() {
           @Override
           public boolean test(Integer val) {
@@ -14,13 +15,15 @@ public class IntPredicateExample {
           }
         };
 
+    // Better
     Predicate<Integer> isEvenMed = (Integer val) -> {
       return val % 2 == 0;
     };
 
-    Predicate<Integer> isEven = val -> val % 2 == 0;
+    // Terse
+    Predicate<Integer> isEvenTerse = val -> val % 2 == 0;
 
     for (int i = 0; i < 10; i++)
-      System.out.println(String.format("%d %s", i, isEven.test(i)));
+      System.out.println(String.format("%d %s", i, isEvenTerse.test(i)));
   }
 }
