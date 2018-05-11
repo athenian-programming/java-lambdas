@@ -51,11 +51,11 @@ class InterfaceExample {
   }
 
   static void apply(String text, TextConverter... converters) {
-    System.out.println(String.format("Applying %d filters to [%s]", converters.length, text));
+    System.out.println(String.format("Applying %d converters to [%s]", converters.length, text));
     String result = text;
     for (TextConverter converter : converters) {
       result = converter.convert(result);
-      System.out.println(String.format("Applied [%s] and got [%s]", converter.getClass().getName(), result));
+      System.out.println(String.format("Applied converter [%s] and got [%s]", converter.getClass().getName(), result));
     }
     System.out.println(result);
     System.out.println();
