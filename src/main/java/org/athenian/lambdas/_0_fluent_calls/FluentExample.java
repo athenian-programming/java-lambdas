@@ -27,5 +27,17 @@ public class FluentExample {
 
     System.out.println(lisa);
 
+    Student walter =
+        new Student()
+            .setZip("94565")
+            .setStreet("789 Civic")
+            .setCity("Dublin")
+            .setFirstName("Walter")
+            .setLastName("Mullen")
+            .setLastName("Thomas")
+            .setParkingSpot("A44");
+
+    System.out.println(walter);
+
   }
 }
