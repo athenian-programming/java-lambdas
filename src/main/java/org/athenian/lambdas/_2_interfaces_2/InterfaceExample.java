@@ -3,7 +3,7 @@ package org.athenian.lambdas._2_interfaces_2;
 
 class InterfaceExample {
 
-  static void main(String[] args) {
+  public static void main(String[] args) {
 
     // Anonymous class
     TextConverter toLower =
