@@ -21,6 +21,5 @@ fun main(args: Array<String>) {
 
     print(twoIntFunc(5, 6) { x, y -> sum(x, y) })
     print(twoIntFunc(7, 8, ::sum))
-
 }
 
