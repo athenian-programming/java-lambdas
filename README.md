@@ -11,7 +11,7 @@ Lambda Example:
 ```kotlin
 students
     .filter { it.passing && it.averageGrade > 4.0 }     // Only passing students
-    .sortedByDescending { it.averageGrade }             // Starting from ones with biggest grades
+    .sortedByDescending { it.averageGrade }             // Starting from ones with best grades
     .take(10)                                           // Take first 10
     .sortedWith(compareBy({ it.surname }, { it.name })) // Sort by surname and then name
 ```
