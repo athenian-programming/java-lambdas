@@ -1,5 +1,7 @@
 package org.athenian.lambdas._3_lambdas;
 
+import static java.lang.String.format;
+
 public class LambdaExample {
 
   public static void main(String[] args) {
@@ -51,11 +53,11 @@ public class LambdaExample {
   }
 
   static void apply(String text, TextConverter... converters) {
-    System.out.println(String.format("Applying %d converters to [%s]", converters.length, text));
+    System.out.println(format("Applying %d converters to [%s]", converters.length, text));
     String result = text;
     for (TextConverter converter : converters) {
       result = converter.convert(result);
-      System.out.println(String.format("Applied converter [%s] and got [%s]", converter.getClass().getName(), result));
+      System.out.println(format("Applied converter [%s] and got [%s]", converter.getClass().getName(), result));
     }
     System.out.println(result);
     System.out.println();

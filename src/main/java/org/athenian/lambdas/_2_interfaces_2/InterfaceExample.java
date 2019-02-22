@@ -1,6 +1,8 @@
 package org.athenian.lambdas._2_interfaces_2;
 
 
+import static java.lang.String.format;
+
 class InterfaceExample {
 
   public static void main(String[] args) {
@@ -13,6 +15,8 @@ class InterfaceExample {
             return text.toLowerCase();
           }
         };
+
+    System.out.println(format("Anonymous class classname = %s", toLower.getClass().getName()));
 
     TextConverter toUpper =
         new TextConverter() {
@@ -51,14 +55,13 @@ class InterfaceExample {
   }
 
   static void apply(String text, TextConverter... converters) {
-    System.out.println(String.format("Applying %d converters to [%s]", converters.length, text));
+    System.out.println(format("Applying %d converters to [%s]", converters.length, text));
     String result = text;
     for (TextConverter converter : converters) {
       result = converter.convert(result);
-      System.out.println(String.format("Applied converter [%s] and got [%s]", converter.getClass().getName(), result));
+      System.out.println(format("Applied converter [%s] and got [%s]", converter.getClass().getName(), result));
     }
     System.out.println(result);
     System.out.println();
   }
-
 }

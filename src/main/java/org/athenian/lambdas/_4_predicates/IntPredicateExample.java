@@ -2,6 +2,8 @@ package org.athenian.lambdas._4_predicates;
 
 import java.util.function.Predicate;
 
+import static java.lang.String.format;
+
 public class IntPredicateExample {
 
   public static void main(String[] args) {
@@ -24,6 +26,6 @@ public class IntPredicateExample {
     Predicate<Integer> isEvenTerse = val -> val % 2 == 0;
 
     for (int i = 0; i < 10; i++)
-      System.out.println(String.format("%d %s", i, isEvenTerse.test(i)));
+      System.out.println(format("%d %s", i, isEvenTerse.test(i)));
   }
 }

@@ -2,6 +2,8 @@ package org.athenian.lambdas._5_functions;
 
 import java.util.function.Function;
 
+import static java.lang.String.format;
+
 public class IntFunctionExample {
 
   public static void main(String[] args) {
@@ -22,7 +24,7 @@ public class IntFunctionExample {
     Function<Integer, Integer> square = val -> val * val;
 
     for (int i = 0; i < 10; i++)
-      System.out.println(String.format("%d %s", i, square.apply(i)));
+      System.out.println(format("%d %s", i, square.apply(i)));
   }
 
 }
