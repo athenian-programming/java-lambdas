@@ -13,12 +13,13 @@ public class IntStreamExample0 {
 
     // Using a verbose anonymous class
     IntStream.range(0, 10)
-             .forEach(new IntConsumer() {
-               @Override
-               public void accept(int i) {
-                 System.out.println(i);
-               }
-             });
+             .forEach(
+                 new IntConsumer() {
+                   @Override
+                   public void accept(int i) {
+                     System.out.println(i);
+                   }
+                 });
 
     // Using a lambda
     IntStream.range(0, 10)

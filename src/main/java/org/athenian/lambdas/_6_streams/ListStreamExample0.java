@@ -20,7 +20,8 @@ public class ListStreamExample0 {
     System.out.println(format("Names starting with A: %s", vals0));
 
     // Does list have name "Ted"
-    boolean hasTed = names.stream().anyMatch(s -> s.equals("Ted"));
+    boolean hasTed = names.stream()
+                          .anyMatch(s -> s.equals("Ted"));
     System.out.println(format("Contains name Ted: %s", hasTed));
 
     // Length of longest name in list
