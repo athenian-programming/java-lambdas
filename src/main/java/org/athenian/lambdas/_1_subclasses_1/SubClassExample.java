@@ -1,4 +1,4 @@
-package org.athenian.lambdas._1_subclasses;
+package org.athenian.lambdas._1_subclasses_1;
 
 import static java.lang.String.format;
 

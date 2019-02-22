@@ -12,14 +12,21 @@ class InterfaceExample {
     Snake snake = new Snake();
     Turtle turtle = new Turtle();
 
-    mammalQuestions(dog, lion);
+    Animal cat = new Dog() {
+      @Override
+      public String sound() {
+        return "Meow";
+      }
+    };
+
+    mammalQuestions(dog, lion, (Mammal) cat);
     reptileQuestions(snake, turtle);
-    animalQuestions(dog, lion, snake, turtle);
+    animalQuestions(dog, lion, snake, turtle, cat);
   }
 
   static void mammalQuestions(Mammal... mammals) {
     for (Mammal mammal : mammals) {
-      String name = mammal.getClass().getSimpleName();
+      String name = getClassName(mammal);
       boolean hair = mammal.hasHair();
       System.out.println(format("A %s has hair: %s", name, hair));
     }
@@ -27,7 +34,7 @@ class InterfaceExample {
 
   static void reptileQuestions(Reptile... reptiles) {
     for (Reptile reptile : reptiles) {
-      String name = reptile.getClass().getSimpleName();
+      String name = getClassName(reptile);
       boolean hair = reptile.hasShell();
       System.out.println(format("A %s has shell: %s", name, hair));
     }
@@ -35,12 +42,17 @@ class InterfaceExample {
 
   static void animalQuestions(Animal... animals) {
     for (Animal animal : animals) {
-      String name = animal.getClass().getSimpleName();
+      String name = getClassName(animal);
       String sound = animal.sound();
       if (animal.makesASound())
         System.out.println(format("A %s makes sound: %s", name, sound));
       else
         System.out.println(format("A %s is silent", name));
     }
+  }
+
+  static String getClassName(Object object) {
+    Class clazz = object.getClass();
+    return clazz.isAnonymousClass() ? clazz.getName() : clazz.getSimpleName();
   }
 }

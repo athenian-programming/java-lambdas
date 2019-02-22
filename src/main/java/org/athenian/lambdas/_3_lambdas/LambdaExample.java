@@ -2,7 +2,13 @@ package org.athenian.lambdas._3_lambdas;
 
 import static java.lang.String.format;
 
+
 public class LambdaExample {
+
+  @FunctionalInterface
+  public interface TextConverter {
+    String convert(String text);
+  }
 
   public static void main(String[] args) {
 
