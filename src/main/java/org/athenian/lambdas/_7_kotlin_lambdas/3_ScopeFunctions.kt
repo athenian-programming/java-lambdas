@@ -4,57 +4,47 @@ class ScopeFunctionTest {
 
     fun letExample(): Int {
         val str: String = "StringVal"
-        val result =
-                str.let {
-                    println("this: $this")
-                    println("it: $it")
-                    42
-                }
-        return result
+        return str.let {
+            println("this: $this")
+            println("it: $it")
+            42
+        }
     }
 
     fun alsoExample(): String {
         val str: String = "StringVal"
-        val result =
-                str.also {
-                    println("this: $this")
-                    println("it: $it")
-                    42
-                }
-        return result
+        return str.also {
+            println("this: $this")
+            println("it: $it")
+            42
+        }
     }
 
     fun runExample(): Int {
         val str: String = "StringVal"
-        val result =
-                str.run {
-                    println("this: $this")
-                    //println("it: $it")
-                    42
-                }
-        return result
+        return str.run {
+            println("this: $this")
+            //println("it: $it")
+            42
+        }
     }
 
     fun applyExample(): String {
         val str: String = "StringVal"
-        val result =
-                str.apply {
-                    println("this: $this")
-                    //println("it: $it")
-                    42
-                }
-        return result
+        return str.apply {
+            println("this: $this")
+            //println("it: $it")
+            42
+        }
     }
 
     fun withExample(): Int {
         val str: String = "StringVal"
-        val result =
-                with(str) {
-                    println("this: $this")
-                    //println("it: $it")
-                    42
-                }
-        return result
+        return with(str) {
+            println("this: $this")
+            //println("it: $it")
+            42
+        }
     }
 }
 

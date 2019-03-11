@@ -1,9 +1,5 @@
 default: versioncheck
 
-jarcheck:
-	./mvnw versions:display-dependency-updates
+versioncheck:
+	./gradlew dependencyUpdates
 
-plugincheck:
-	./mvnw versions:display-plugin-updates
-
-versioncheck: jarcheck plugincheck
