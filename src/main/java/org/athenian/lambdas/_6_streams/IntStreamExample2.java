@@ -46,7 +46,5 @@ public class IntStreamExample2 {
                  .mapToObj(i -> i * i)
                  .collect(Collectors.toList());
     System.out.println(vals2);
-
   }
-
 }

@@ -36,7 +36,5 @@ public class IntStreamExample1 {
     IntStream.range(0, 10)
              .filter(i -> i % 2 == 0)
              .forEach(i -> System.out.println(i));
-
   }
-
 }
