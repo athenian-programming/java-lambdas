@@ -1,14 +1,15 @@
-# Java and Kotlin Lambdas
+# Java Lambdas
 
-This repo contains code snippets useful for understanding how Java and Kotlin lambdas work.
+This repo contains code snippets useful for understanding how Java lambdas work.
 
-It uses Java 11 stream() calls.
+## Setup
+This repo uses Java 11 
 
-Helpful Tutorials:
+## Tutorials:
 * [How to start working with Lambda Expressions in Java](https://medium.freecodecamp.org/learn-these-4-things-and-working-with-lambda-expressions-b0ab36e0fffc)
 * [Java Lambda Tips and Best Practices](http://www.baeldung.com/java-8-lambda-expressions-tips)
 
-Examples:
+## Examples:
 * [Fluent Calls](src/main/java/org/athenian/lambdas/_0_fluent_calls)
 * [Java Subclasses 1](src/main/java/org/athenian/lambdas/_1_subclasses_1)
 * [Java Subclasses 2](src/main/java/org/athenian/lambdas/_1_subclasses_2)
@@ -21,10 +22,5 @@ Examples:
 
 Java Lambda Example:
 ```kotlin
-students
-    .filter { it.passing && it.averageGrade > 3.5 }     // Only passing students with high GPAs
-    .sortedByDescending { it.averageGrade }             // Starting from ones with best grades
-    .take(10)                                           // Take first 10
-    .sortedWith(compareBy({ it.surname }, { it.name })) // Sort by surname and then name
 ```
 

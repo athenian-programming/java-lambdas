@@ -7,17 +7,20 @@ public class FluentExample {
     // Non-fluent calls
     String str1 = "This is a test";
     str1 = str1.toUpperCase();
-    str1 = str1.replaceAll("IS", "99");
+    str1 = str1.replaceAll("IS", "98");
     str1 = str1.substring(0, 8);
-    System.out.println(str1);
+
+    System.out.println("Non-fluent String: " + str1);
+
 
     // Fluent calls
     String str2 =
         "This is a test"
             .toUpperCase()
-            .replaceAll("IS", "99")
+            .replaceAll("IS", "98")
             .substring(0, 8);
-    System.out.println(str2);
+
+    System.out.println("Fluent String: " + str2);
 
 
     // Non-fluent calls
@@ -29,7 +32,8 @@ public class FluentExample {
     bill.setZip("94528");
     bill.setParkingSpot("A23");
 
-    System.out.println(bill);
+    System.out.println("Non-fluent Bill: " + bill);
+
 
     // Fluent calls
     Student lisa =
@@ -41,7 +45,7 @@ public class FluentExample {
             .setZip("94548")
             .setParkingSpot("B55");
 
-    System.out.println(lisa);
+    System.out.println("Fluent Lisa: " + lisa);
 
     Student walter =
         new Student()
@@ -53,7 +57,6 @@ public class FluentExample {
             .setLastName("Thomas")
             .setParkingSpot("A44");
 
-    System.out.println(walter);
-
+    System.out.println("Fluent Walter: " + walter);
   }
 }
