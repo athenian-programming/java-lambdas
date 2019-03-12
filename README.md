@@ -20,7 +20,7 @@ This repo uses Java 11
 * [Java Functions](src/main/java/org/athenian/lambdas/_5_functions)
 * [Java Streams](src/main/java/org/athenian/lambdas/_6_streams)
 
-Java Lambda Example:
-```kotlin
+## Java Lambda Example
+```Java
 ```
 
