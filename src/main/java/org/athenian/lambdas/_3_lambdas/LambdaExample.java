@@ -10,8 +10,19 @@ public class LambdaExample {
     String convert(String text);
   }
 
-  public static void main(String[] args) {
+  static void apply(String text, TextConverter... converters) {
+    System.out.println(format("Applying %d converters to [%s]", converters.length, text));
+    String result = text;
+    for (TextConverter converter : converters) {
+      result = converter.convert(result);
+      System.out.println(format("Applied converter [%s] and got [%s]", converter.getClass().getName(), result));
+    }
+    System.out.println(result);
+    System.out.println();
+  }
 
+
+  public static void main(String[] args) {
     // Anonymous class
     TextConverter toLower =
         new TextConverter() {
@@ -57,16 +68,4 @@ public class LambdaExample {
                   return sb.toString();
                 });
   }
-
-  static void apply(String text, TextConverter... converters) {
-    System.out.println(format("Applying %d converters to [%s]", converters.length, text));
-    String result = text;
-    for (TextConverter converter : converters) {
-      result = converter.convert(result);
-      System.out.println(format("Applied converter [%s] and got [%s]", converter.getClass().getName(), result));
-    }
-    System.out.println(result);
-    System.out.println();
-  }
-
 }
