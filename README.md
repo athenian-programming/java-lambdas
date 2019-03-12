@@ -3,7 +3,7 @@
 This repo contains code snippets useful for understanding how Java lambdas work.
 
 ## Setup
-This repo uses Java 11 
+Install [Java 11](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html) 
 
 ## Tutorials:
 * [How to start working with Lambda Expressions in Java](https://medium.freecodecamp.org/learn-these-4-things-and-working-with-lambda-expressions-b0ab36e0fffc)
@@ -12,15 +12,21 @@ This repo uses Java 11
 ## Examples:
 * [Fluent Calls](src/main/java/org/athenian/lambdas/_0_fluent_calls)
 * [Java Subclasses 1](src/main/java/org/athenian/lambdas/_1_subclasses_1)
-* [Java Subclasses 2](src/main/java/org/athenian/lambdas/_1_subclasses_2)
-* [Java Interfaces 1](src/main/java/org/athenian/lambdas/_2_interfaces_1)
-* [Java Interfaces 1](src/main/java/org/athenian/lambdas/_2_interfaces_2)
-* [Java Lambdas](src/main/java/org/athenian/lambdas/_3_lambdas)
-* [Java Predicates](src/main/java/org/athenian/lambdas/_4_predicates)
-* [Java Functions](src/main/java/org/athenian/lambdas/_5_functions)
-* [Java Streams](src/main/java/org/athenian/lambdas/_6_streams)
+* [Subclasses 2](src/main/java/org/athenian/lambdas/_1_subclasses_2)
+* [Interfaces 1](src/main/java/org/athenian/lambdas/_2_interfaces_1)
+* [Interfaces 1](src/main/java/org/athenian/lambdas/_2_interfaces_2)
+* [Lambdas](src/main/java/org/athenian/lambdas/_3_lambdas)
+* [Predicates](src/main/java/org/athenian/lambdas/_4_predicates)
+* [Functions](src/main/java/org/athenian/lambdas/_5_functions)
+* [Streams](src/main/java/org/athenian/lambdas/_6_streams)
 
 ## Java Lambda Example
 ```Java
+Arrays.asList("a1", "a2", "b1", "c2", "c1")
+    .stream()
+    .filter(s -> s.startsWith("c"))
+    .map(String::toUpperCase)
+    .sorted()
+    .forEach(System.out::println);
 ```
 
