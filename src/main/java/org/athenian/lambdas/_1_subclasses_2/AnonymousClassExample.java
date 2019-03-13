@@ -22,7 +22,6 @@ public class AnonymousClassExample {
   }
 
   static void anonymousClass() {
-
     AnonymousClassExample obj = new AnonymousClassExample() {
       {
         instVal = 4;
