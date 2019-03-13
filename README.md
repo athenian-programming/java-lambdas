@@ -3,9 +3,9 @@
 This repo contains code snippets useful for understanding how Java lambdas work.
 
 ## Setup
-Install [Java 11](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html) 
+* Install [Java 11](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html) 
 
-## Tutorials:
+## Tutorials
 * [How to start working with Lambda Expressions in Java](https://medium.freecodecamp.org/learn-these-4-things-and-working-with-lambda-expressions-b0ab36e0fffc)
 * [Java Lambda Tips and Best Practices](http://www.baeldung.com/java-8-lambda-expressions-tips)
 * [Java 8 Stream Tutorial](https://winterbe.com/posts/2014/07/31/java8-stream-tutorial-examples/)
