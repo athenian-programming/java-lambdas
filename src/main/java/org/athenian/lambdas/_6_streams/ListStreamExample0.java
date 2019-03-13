@@ -9,7 +9,7 @@ public class ListStreamExample0 {
 
   public static void main(String[] args) {
 
-    List<String> names = List.of("Bill", "Mary", "Ted", "Abdul", "Al", "Andy", "Alexander", "Bo");
+    var names = List.of("Bill", "Mary", "Ted", "Abdul", "Al", "Andy", "Alexander", "Bo");
 
     // All names with more than 3 chars starting with A
     List<String> vals0 =
@@ -25,7 +25,7 @@ public class ListStreamExample0 {
     System.out.println(format("Contains name Ted: %s", hasTed));
 
     // Length of longest name in list
-    int maxLen =
+    var maxLen =
         names.stream()
              .mapToInt(s -> s.length())
              .max()
@@ -41,7 +41,7 @@ public class ListStreamExample0 {
     System.out.println(format("Longest name: %s", longestName));
 
     // Char count of all names longer than 2 chars long
-    int len =
+    var len =
         names.stream()
              .filter(s -> s.length() > 2)
              .mapToInt(s -> s.length())
