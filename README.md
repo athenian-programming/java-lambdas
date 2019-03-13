@@ -8,6 +8,7 @@ Install [Java 11](https://www.oracle.com/technetwork/java/javase/downloads/jdk11
 ## Tutorials:
 * [How to start working with Lambda Expressions in Java](https://medium.freecodecamp.org/learn-these-4-things-and-working-with-lambda-expressions-b0ab36e0fffc)
 * [Java Lambda Tips and Best Practices](http://www.baeldung.com/java-8-lambda-expressions-tips)
+* [Java 8 Stream Tutorial](https://winterbe.com/posts/2014/07/31/java8-stream-tutorial-examples/)
 
 ## Examples:
 * [Fluent Calls](src/main/java/org/athenian/lambdas/_0_fluent_calls)

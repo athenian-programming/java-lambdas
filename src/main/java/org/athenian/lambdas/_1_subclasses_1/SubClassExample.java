@@ -36,10 +36,8 @@ class SubClassExample {
     String result = text;
     for (TextConverter converter : converters) {
       result = converter.convert(result);
-      System.out.println(format("Applied converter [%s] and got [%s]", converter.getClass().getName(), result));
+      System.out.println(format("Applied converter [%s] and got [%s]", converter.getClass().getSimpleName(), result));
     }
-    System.out.println(result);
-    System.out.println();
+    System.out.println("Result: " + result + "\n");
   }
-
 }
