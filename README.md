@@ -1,6 +1,6 @@
 # Java Lambdas
 
-This repo contains code snippets useful for understanding how Java lambdas work.
+This repo contains code snippets useful for understanding Java lambdas.
 
 ## Setup
 * Install [Java 11](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html) 
