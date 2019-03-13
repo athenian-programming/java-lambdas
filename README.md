@@ -12,7 +12,7 @@ This repo contains code snippets useful for understanding Java lambdas.
 
 ## Examples:
 * [Fluent Calls](src/main/java/org/athenian/lambdas/_0_fluent_calls)
-* [Java Subclasses 1](src/main/java/org/athenian/lambdas/_1_subclasses_1)
+* [Subclasses 1](src/main/java/org/athenian/lambdas/_1_subclasses_1)
 * [Subclasses 2](src/main/java/org/athenian/lambdas/_1_subclasses_2)
 * [Interfaces 1](src/main/java/org/athenian/lambdas/_2_interfaces_1)
 * [Interfaces 1](src/main/java/org/athenian/lambdas/_2_interfaces_2)
