@@ -11,8 +11,8 @@ public class AnonymousClassExample {
   }
 
   static void regular() {
-    AnonymousClassExample obj = new AnonymousClassExample();
-    Class clazz = obj.getClass();
+    var obj = new AnonymousClassExample();
+    var clazz = obj.getClass();
 
     System.out.println("Class name: " + clazz.getName());
     System.out.println("Simple class name: " + clazz.getSimpleName());
@@ -33,7 +33,7 @@ public class AnonymousClassExample {
       }
     };
 
-    Class clazz = obj.getClass();
+    var clazz = obj.getClass();
 
     System.out.println("Class name: " + clazz.getName());
     System.out.println("Simple class name: " + clazz.getSimpleName());

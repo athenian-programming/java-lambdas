@@ -33,7 +33,7 @@ class SubClassExample {
 
   private static void apply(String text, TextConverter... converters) {
     System.out.println(format("Applying %d converters to [%s]", converters.length, text));
-    String result = text;
+    var result = text;
     for (TextConverter converter : converters) {
       result = converter.convert(result);
       System.out.println(format("Applied converter [%s] and got [%s]", converter.getClass().getSimpleName(), result));

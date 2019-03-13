@@ -8,7 +8,7 @@ public class StringFunctionExample {
 
     Function<String, String> reverser =
         text -> {
-          StringBuilder sb = new StringBuilder();
+          var sb = new StringBuilder();
           for (int i = text.length() - 1; i >= 0; i--)
             sb.append(text.charAt(i));
           return sb.toString();

@@ -26,24 +26,24 @@ class InterfaceExample {
 
   static void mammalQuestions(Mammal... mammals) {
     for (Mammal mammal : mammals) {
-      String name = getClassName(mammal);
-      boolean hair = mammal.hasHair();
+      var name = getClassName(mammal);
+      var hair = mammal.hasHair();
       System.out.println(format("A %s has hair: %s", name, hair));
     }
   }
 
   static void reptileQuestions(Reptile... reptiles) {
     for (Reptile reptile : reptiles) {
-      String name = getClassName(reptile);
-      boolean hair = reptile.hasShell();
-      System.out.println(format("A %s has shell: %s", name, hair));
+      var name = getClassName(reptile);
+      var shell = reptile.hasShell();
+      System.out.println(format("A %s has shell: %s", name, shell));
     }
   }
 
   static void animalQuestions(Animal... animals) {
     for (Animal animal : animals) {
-      String name = getClassName(animal);
-      String sound = animal.sound();
+      var name = getClassName(animal);
+      var sound = animal.sound();
       if (animal.makesASound())
         System.out.println(format("A %s makes sound: %s", name, sound));
       else
@@ -52,7 +52,7 @@ class InterfaceExample {
   }
 
   static String getClassName(Object object) {
-    Class clazz = object.getClass();
+    var clazz = object.getClass();
     return clazz.isAnonymousClass() ? clazz.getName() : clazz.getSimpleName();
   }
 }

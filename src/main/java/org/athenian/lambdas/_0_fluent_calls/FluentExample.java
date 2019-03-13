@@ -5,7 +5,7 @@ public class FluentExample {
   public static void main(String[] args) {
 
     // Non-fluent calls
-    String str1 = "This is a test";
+    var str1 = "This is a test";
     str1 = str1.toUpperCase();
     str1 = str1.replaceAll("IS", "98");
     str1 = str1.substring(0, 8);
@@ -14,7 +14,7 @@ public class FluentExample {
 
 
     // Fluent calls
-    String str2 =
+    var str2 =
         "This is a test"
             .toUpperCase()
             .replaceAll("IS", "98")
@@ -24,7 +24,7 @@ public class FluentExample {
 
 
     // Non-fluent calls
-    Student bill = new Student();
+    var bill = new Student();
     bill.setFirstName("Bill");
     bill.setLastName("Jones");
     bill.setStreet("123 Main");
@@ -36,7 +36,7 @@ public class FluentExample {
 
 
     // Fluent calls
-    Student lisa =
+    var lisa =
         new Student()
             .setFirstName("Lisa")
             .setLastName("Johnson")
@@ -47,7 +47,7 @@ public class FluentExample {
 
     System.out.println("Fluent Lisa: " + lisa);
 
-    Student walter =
+    var walter =
         new Student()
             .setZip("94565")
             .setStreet("789 Civic")
