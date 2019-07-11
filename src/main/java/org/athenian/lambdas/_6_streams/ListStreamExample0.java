@@ -9,13 +9,14 @@ public class ListStreamExample0 {
 
   public static void main(String[] args) {
 
-    var names = List.of("Bill", "Mary", "Ted", "Abdul", "Al", "Andy", "Alexander", "Bo");
+    List<String> names = List.of("Bill", "Mary", "Ted", "Abdul", "Al", "Andy", "Alexander", "Bo");
 
     // All names with more than 3 chars starting with A
     List<String> vals0 =
         names.stream()
              .filter(s -> s.length() > 3)
              .filter(s -> s.startsWith("A"))
+             .map(s -> "A new value: " + s + " or this")
              .collect(Collectors.toList());
     System.out.println(format("Names starting with A: %s", vals0));
 

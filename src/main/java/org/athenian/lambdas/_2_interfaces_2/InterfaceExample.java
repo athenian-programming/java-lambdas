@@ -3,7 +3,7 @@ package org.athenian.lambdas._2_interfaces_2;
 
 import static java.lang.String.format;
 
-class InterfaceExample {
+public class InterfaceExample {
 
   @FunctionalInterface
   public interface TextConverter {

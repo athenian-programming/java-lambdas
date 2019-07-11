@@ -1,4 +1,4 @@
-package org.athenian.lambdas._1_subclasses_1;
+package org.athenian.lambdas._1_subclasses_2;
 
 public class ToUpper
     extends TextConverter {

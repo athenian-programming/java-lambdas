@@ -1,4 +1,4 @@
-package org.athenian.lambdas._1_subclasses_2;
+package org.athenian.lambdas._1_subclasses_1;
 
 import static java.lang.String.format;
 
@@ -6,7 +6,7 @@ public class AnonymousClassExample {
   int instVal = 2;
 
   public static void main(String[] args) {
-    regular();
+    //regular();
     anonymousClass();
   }
 
