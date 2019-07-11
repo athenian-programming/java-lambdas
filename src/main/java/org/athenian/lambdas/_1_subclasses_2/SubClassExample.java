@@ -10,36 +10,23 @@ class SubClassExample {
     TextConverter toUpper = new ToUpper();
     TextConverter doubler1 = new Doubler();
 
-
-    TextConverter doubler2 = new class Doubler2
-        extends TextConverter {
-      @Override
-      String convert(String text) {
-        return text + text;
-      }
-    }
-    ;
-
-    TextConverter tripler = new TextConverter() {
+    TextConverter doubler2 = new TextConverter() {
       @Override
       String convert(String text) {
         return text + text;
       }
     };
 
-    TextConverter() {
+    TextConverter tripler = new TextConverter() {
       @Override
-      String convert (String text){
+      String convert(String text) {
         return text + text + text;
       }
-    }
-
-    Doubler2 d2 = new Doubler2();
+    };
 
     System.out.println("Doubler1 Class name = " + doubler1.getClass().getName());
     System.out.println("Doubler2 Class name = " + doubler2.getClass().getName());
     System.out.println("Tripler Class name = " + tripler.getClass().getName());
-    System.out.println("Doubler2 Class name = " + d2.getClass().getName());
 
     // Create an anonymous class
     TextConverter reverser =
