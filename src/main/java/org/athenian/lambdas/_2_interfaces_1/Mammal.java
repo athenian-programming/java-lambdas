@@ -8,5 +8,7 @@ abstract class Mammal {
     this.hair = hair;
   }
 
-  boolean hasHair() { return hair;}
+  boolean hasHair() {
+    return hair;
+  }
 }

@@ -5,11 +5,6 @@ import static java.lang.String.format;
 
 public class InterfaceExample {
 
-  @FunctionalInterface
-  public interface TextConverter {
-    String convert(String text);
-  }
-
   public static void main(String[] args) {
 
     // Anonymous class
@@ -68,5 +63,10 @@ public class InterfaceExample {
     }
     System.out.println(result);
     System.out.println();
+  }
+
+  @FunctionalInterface
+  public interface TextConverter {
+    String convert(String text);
   }
 }

@@ -10,7 +10,7 @@ public class StringPredicateExample {
 
     // Verbose
     Predicate<String> containsHelloVerbose =
-        new Predicate<String>() {
+        new Predicate<>() {
           @Override
           public boolean test(String val) {
             return val.contains("Hello");
@@ -31,8 +31,8 @@ public class StringPredicateExample {
     var names = Arrays.asList("Alice", "Bill", "Allicia", "Pete");
 
     var a_names = names.stream()
-                                .filter(val -> val.startsWith("A"))
-                                .collect(Collectors.toList());
+                       .filter(val -> val.startsWith("A"))
+                       .collect(Collectors.toList());
 
     var non_a_names = names.stream()
                            .filter(val -> !a_names.contains(val))

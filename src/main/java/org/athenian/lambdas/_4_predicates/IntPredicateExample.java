@@ -12,7 +12,7 @@ public class IntPredicateExample {
 
     // Verbose
     Predicate<Integer> isEvenVerbose =
-        new Predicate<Integer>() {
+        new Predicate<>() {
           @Override
           public boolean test(Integer val) {
             return val % 2 == 0;

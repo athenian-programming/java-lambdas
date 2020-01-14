@@ -5,11 +5,6 @@ import static java.lang.String.format;
 
 public class LambdaExample {
 
-  @FunctionalInterface
-  public interface TextConverter {
-    String convert(String text);
-  }
-
   static void apply(String text, TextConverter... converters) {
     System.out.println(format("Applying %d converters to [%s]", converters.length, text));
     String result = text;
@@ -20,7 +15,6 @@ public class LambdaExample {
     System.out.println(result);
     System.out.println();
   }
-
 
   public static void main(String[] args) {
     // Anonymous class
@@ -59,13 +53,19 @@ public class LambdaExample {
     apply("Hello 9", text -> text.replaceAll("9", "999"));
 
     apply("Hello 10",
-                text -> text.toUpperCase(),
-                text -> text + text,
-                text -> {
-                  StringBuilder sb = new StringBuilder();
-                  for (int i = text.length() - 1; i >= 0; i--)
-                    sb.append(text.charAt(i));
-                  return sb.toString();
-                });
+          text -> text.toUpperCase(),
+          text -> text + text,
+          text -> {
+            StringBuilder sb = new StringBuilder();
+            for (int i = text.length() - 1; i >= 0; i--)
+              sb.append(text.charAt(i));
+            return sb.toString();
+          });
+  }
+
+
+  @FunctionalInterface
+  public interface TextConverter {
+    String convert(String text);
   }
 }

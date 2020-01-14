@@ -42,5 +42,7 @@ public class AnonymousClassExample {
     System.out.println(format("Values: %s %d", obj.getValue(), obj.instVal));
   }
 
-  String getValue() {return "Hello";}
+  String getValue() {
+    return "Hello";
+  }
 }

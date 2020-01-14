@@ -56,12 +56,12 @@ class SubClassExample {
           });
   }
 
-  private static void apply(String text, TextConverter... converters) {
+  static void apply(String text, TextConverter... converters) {
     System.out.println(format("Applying %d converters to [%s]", converters.length, text));
     var result = text;
     for (TextConverter converter : converters) {
       result = converter.convert(result);
-      Class clazz = converter.getClass();
+      Class<? extends TextConverter> clazz = converter.getClass();
 
       System.out.println(format("Applied converter [%s] and got [%s]",
                                 clazz.isAnonymousClass() ? clazz.getName().replace(clazz.getPackageName() + ".", "") : clazz.getSimpleName(),

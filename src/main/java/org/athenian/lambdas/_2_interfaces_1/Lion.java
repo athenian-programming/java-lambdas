@@ -1,8 +1,6 @@
 package org.athenian.lambdas._2_interfaces_1;
 
-public class Lion
-    extends Mammal
-    implements Animal {
+public class Lion extends Mammal implements Animal {
 
   public Lion() {
     super(true);

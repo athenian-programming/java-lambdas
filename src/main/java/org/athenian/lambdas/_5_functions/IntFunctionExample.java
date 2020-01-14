@@ -10,7 +10,7 @@ public class IntFunctionExample {
 
     // Verbose
     Function<Integer, Integer> squareVerbose =
-        new Function<Integer, Integer>() {
+        new Function<>() {
           @Override
           public Integer apply(Integer val) {
             return val * val;

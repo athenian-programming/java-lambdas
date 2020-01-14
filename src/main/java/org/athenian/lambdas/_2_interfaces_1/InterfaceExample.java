@@ -12,12 +12,13 @@ class InterfaceExample {
     Snake snake = new Snake();
     Turtle turtle = new Turtle();
 
-    Animal cat = new Dog() {
-      @Override
-      public String sound() {
-        return "Meow";
-      }
-    };
+    Animal cat =
+        new Dog() {
+          @Override
+          public String sound() {
+            return "Meow";
+          }
+        };
 
     mammalQuestions(dog, lion, (Mammal) cat);
     reptileQuestions(snake, turtle);
