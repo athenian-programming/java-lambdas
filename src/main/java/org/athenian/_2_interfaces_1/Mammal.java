@@ -11,4 +11,6 @@ abstract class Mammal {
   boolean hasHair() {
     return hair;
   }
+
+  //abstract boolean hasScales();
 }
