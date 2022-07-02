@@ -17,7 +17,7 @@ public class IntPredicateExample {
                 };
 
         // Better
-        Predicate<Integer> isEvenMedium = (Integer val) -> {
+        Predicate<Integer> isEvenMedium = val -> {
             return val % 2 == 0;
         };
 
