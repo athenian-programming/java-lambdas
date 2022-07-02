@@ -4,8 +4,8 @@ plugins {
 }
 
 repositories {
+    google()
     mavenCentral()
-    mavenLocal()
 }
 
 def jvmVersion = '1.11'
