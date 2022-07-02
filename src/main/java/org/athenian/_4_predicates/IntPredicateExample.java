@@ -30,13 +30,15 @@ public class IntPredicateExample {
 
         var vals = Arrays.asList(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
-        var evens = vals.stream()
-                        .filter(val -> val % 2 == 0)
-                        .collect(Collectors.toList());
+        var evens =
+                vals.stream()
+                    .filter(val -> val % 2 == 0)
+                    .collect(Collectors.toList());
 
-        var odds = vals.stream()
-                       .filter(val -> !evens.contains(val))
-                       .collect(Collectors.toList());
+        var odds =
+                vals.stream()
+                    .filter(val -> !evens.contains(val))
+                    .collect(Collectors.toList());
 
         System.out.println("Evens: " + evens);
         System.out.println("Odds: " + odds);
