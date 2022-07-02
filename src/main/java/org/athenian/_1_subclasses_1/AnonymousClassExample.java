@@ -17,7 +17,7 @@ public class AnonymousClassExample {
         System.out.println("Simple class name: " + clazz.getSimpleName());
         System.out.println("Package name: " + clazz.getPackage().getName());
         System.out.println("Is it anonymous: " + clazz.isAnonymousClass());
-        System.out.printf("Values: %s %d%n", obj.getValue(), obj.instVal);
+        System.out.printf("Values: %s %d%n", obj.getGreeting(), obj.instVal);
     }
 
     static void anonymousClass() {
@@ -27,8 +27,8 @@ public class AnonymousClassExample {
             }
 
             @Override
-            String getValue() {
-                return super.getValue() + " World";
+            String getGreeting() {
+                return super.getGreeting() + " World";
             }
         };
 
@@ -38,10 +38,10 @@ public class AnonymousClassExample {
         System.out.println("Simple class name: " + clazz.getSimpleName());
         System.out.println("Package name: " + clazz.getPackage().getName());
         System.out.println("Is it anonymous: " + clazz.isAnonymousClass());
-        System.out.printf("Values: %s %d%n", obj.getValue(), obj.instVal);
+        System.out.printf("Values: %s %d%n", obj.getGreeting(), obj.instVal);
     }
 
-    String getValue() {
+    String getGreeting() {
         return "Hello";
     }
 }

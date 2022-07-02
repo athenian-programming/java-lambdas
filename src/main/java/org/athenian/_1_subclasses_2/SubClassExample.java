@@ -8,19 +8,21 @@ class SubClassExample {
         TextConverter toUpper = new ToUpper();
         TextConverter doubler1 = new Doubler();
 
-        TextConverter doubler2 = new TextConverter() {
-            @Override
-            String convert(String text) {
-                return text + text;
-            }
-        };
+        TextConverter doubler2 =
+                new TextConverter() {
+                    @Override
+                    String convert(String text) {
+                        return text + text;
+                    }
+                };
 
-        TextConverter tripler = new TextConverter() {
-            @Override
-            String convert(String text) {
-                return text + text + text;
-            }
-        };
+        TextConverter tripler =
+                new TextConverter() {
+                    @Override
+                    String convert(String text) {
+                        return text + text + text;
+                    }
+                };
 
         System.out.println("Doubler1 Class name = " + doubler1.getClass().getName());
         System.out.println("Doubler2 Class name = " + doubler2.getClass().getName());
@@ -59,12 +61,12 @@ class SubClassExample {
         var result = text;
         for (TextConverter converter : converters) {
             result = converter.convert(result);
-            Class<? extends TextConverter> clazz = converter.getClass();
 
+            Class<? extends TextConverter> clazz = converter.getClass();
             System.out.printf("Applied converter [%s] and got [%s]%n",
                               clazz.isAnonymousClass() ? clazz.getName().replace(clazz.getPackageName() + ".", "") : clazz.getSimpleName(),
                               result);
         }
-        System.out.println("Result: " + result + "\n");
+        System.out.printf("Result: %s%n", result);
     }
 }
