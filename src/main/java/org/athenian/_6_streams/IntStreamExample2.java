@@ -10,7 +10,6 @@ import java.util.stream.IntStream;
 public class IntStreamExample2 {
 
   public static void main(String[] args) {
-
     // The non-lambda way
     List<Integer> vals0 = new ArrayList<>();
     for (int i = 0; i < 10; i++) {

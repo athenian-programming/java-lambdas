@@ -7,7 +7,6 @@ import java.util.stream.Collectors;
 public class IntPredicateExample {
 
     public static void main(String[] args) {
-
         // Verbose
         Predicate<Integer> isEvenVerbose =
                 new Predicate<>() {

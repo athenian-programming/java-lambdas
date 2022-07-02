@@ -6,7 +6,6 @@ import java.util.stream.IntStream;
 public class IntStreamExample0 {
 
   public static void main(String[] args) {
-
     // The non-lambda way
     for (int i = 0; i < 10; i++)
       System.out.println(i);

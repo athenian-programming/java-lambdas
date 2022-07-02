@@ -7,7 +7,6 @@ import java.util.stream.Collectors;
 public class StringPredicateExample {
 
   public static void main(String[] args) {
-
     // Verbose
     Predicate<String> containsHelloVerbose =
         new Predicate<>() {

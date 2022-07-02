@@ -68,14 +68,13 @@ public class Student {
 
   @Override
   public String toString() {
-    return new StringBuilder("Student{")
-        .append("firstName='").append(firstName).append('\'')
-        .append(", lastName='").append(lastName).append('\'')
-        .append(", street='").append(street).append('\'')
-        .append(", city='").append(city).append('\'')
-        .append(", zip='").append(zip).append('\'')
-        .append(", parkingSpot='").append(parkingSpot).append('\'')
-        .append('}')
-        .toString();
+    return "Student{" +
+            "firstName='" + firstName + "', " +
+            "lastName='" + lastName + "', " +
+            "street='" + street + "', " +
+            "city='" + city + "', " +
+            "zip='" + zip + "', " +
+            "parkingSpot='" + parkingSpot + "'" +
+            '}';
   }
 }

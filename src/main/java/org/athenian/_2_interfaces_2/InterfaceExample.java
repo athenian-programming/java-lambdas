@@ -4,7 +4,6 @@ package org.athenian._2_interfaces_2;
 public class InterfaceExample {
 
     public static void main(String[] args) {
-
         // Anonymous class
         TextConverter toLower =
                 new TextConverter() {

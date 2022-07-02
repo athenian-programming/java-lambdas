@@ -7,7 +7,6 @@ import java.util.stream.IntStream;
 public class IntStreamExample1 {
 
   public static void main(String[] args) {
-
     // The non-lambda way
     for (int i = 0; i < 10; i++) {
       if (i % 2 != 0)

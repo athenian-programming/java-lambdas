@@ -21,7 +21,7 @@ class InterfaceExample {
         // System.out.println(dog.getClass().getSimpleName());
         // System.out.println(cat.getClass().getName());
 
-        mammalQuestions(dog, lion, (Mammal) cat);
+        mammalQuestions(dog, lion, cat);
         reptileQuestions(snake, turtle);
         animalQuestions(dog, lion, snake, turtle, cat);
     }

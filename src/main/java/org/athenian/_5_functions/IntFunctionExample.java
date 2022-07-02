@@ -5,7 +5,6 @@ import java.util.function.Function;
 public class IntFunctionExample {
 
     public static void main(String[] args) {
-
         // Verbose
         Function<Integer, Integer> squareVerbose =
                 new Function<>() {

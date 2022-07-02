@@ -4,7 +4,8 @@ public class AnonymousClassExample {
     int instVal = 2;
 
     public static void main(String[] args) {
-        //regular();
+        regular();
+        System.out.println();
         anonymousClass();
     }
 
