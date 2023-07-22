@@ -4,4 +4,4 @@ versioncheck:
 	./gradlew dependencyUpdates
 
 upgrade-wrapper:
-	./gradlew wrapper --gradle-version=7.5-rc-3 --distribution-type=bin
+	./gradlew wrapper --gradle-version=8.2.1 --distribution-type=bin
