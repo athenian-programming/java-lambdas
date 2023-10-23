@@ -5,7 +5,7 @@ import java.util.function.Function;
 public class IntFunctionExample {
 
     public static void main(String[] args) {
-        // Verbose
+        // Most Verbose
         Function<Integer, Integer> squareVerbose =
                 new Function<>() {
                     @Override
@@ -14,10 +14,12 @@ public class IntFunctionExample {
                     }
                 };
 
+        // Less Verbose
         Function<Integer, Integer> squareMed = (Integer val) -> {
             return val * val;
         };
 
+        // Terse
         Function<Integer, Integer> square = val -> val * val;
 
         for (int i = 0; i < 10; i++)
