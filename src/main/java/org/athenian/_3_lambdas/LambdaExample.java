@@ -7,7 +7,7 @@ public class LambdaExample {
         String result = text;
         for (TextConverter converter : converters) {
             result = converter.convert(result);
-            System.out.printf("Applied converter [%s] and got [%s]%n", converter.getClass().getName(), result);
+            System.out.printf("Applied converter [%s] and got [%s]%n", converter.getClass().getSimpleName(), result);
         }
         System.out.println(result);
         System.out.println();
